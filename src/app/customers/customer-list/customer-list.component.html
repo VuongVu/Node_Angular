@@ -1,33 +1,36 @@
 <div class="container">
   <!-- SEARCH CONDITIONS FORM START -->
-  <form class="form-horizontal"> 
+  <form class="form-horizontal" [formGroup]="customerForm" (ngSubmit)="searchCustomers(customerForm.value)"> 
     <div class="form-group">
-      <label class="control-label col-sm-2" for="company">会社</label>
+      <label class="control-label col-sm-2" for="kaisha">会社</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" id="company" name="" value="">
+        <input type="text" class="form-control" id="kaisha" formControlName="kaisha">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="department">部署</label>
+      <label class="control-label col-sm-2" for="busho">部署</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" id="department" name="" value="">
+        <input type="text" class="form-control" id="busho" formControlName="busho">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="name">名前</label>
+      <label class="control-label col-sm-2" for="namae">名前</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" id="name" name="" value="">
+        <input type="text" class="form-control" id="namae" formControlName="namae">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="cube_emp">CUBE担当者</label>
+      <label class="control-label col-sm-2" for="cube_tantousha">CUBE担当者</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" id="cube_emp" name="" value="">
+        <input type="text" class="form-control" id="cube_tantousha">
       </div>
     </div>
     <div class="form-group"> 
       <div class="col-sm-1">
         <button type="submit" class="btn btn-primary">絞り込み</button>
+      </div>
+      <div class="col-sm-offset-1 col-sm-1">
+        <button type="button" class="btn btn-primary">年賀状送付一覧出力</button>
       </div>
     </div>
   </form>

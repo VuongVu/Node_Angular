@@ -1,4 +1,4 @@
-export class Customer {
+export class Customers {
   id: Number;
   kaisha: String;
   busho_1: String;

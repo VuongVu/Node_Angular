@@ -1,7 +1,7 @@
 // Imports
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 // Declarations
@@ -15,7 +15,7 @@ import { UsersComponent } from './users/users.component';
 
 import { Routing } from './app.routes';
 import { UsersService } from './users.service';
-import { CustomersService } from './customers.service';
+import { CustomersService } from './customers/services/customers.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { CustomersService } from './customers.service';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     JsonpModule,
     Routing

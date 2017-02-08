@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const favicon = require('serve-favicon');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const opn = require('opn');
 
 // Get our API routes
 const api = require('./server/routes/api');
@@ -72,6 +73,9 @@ const server = http.createServer(app);
 
 // Listen on provided port, on all network interfaces.
 server.listen(port, () => {
-  console.log(`API running on localhost:　${port}`);
+  console.log(`API running on localhost: ${port}`);
   console.log('Press Ctrl+C to quit.');
 });
+
+// Opens the url in the default browser 
+opn('http://localhost:3000');
