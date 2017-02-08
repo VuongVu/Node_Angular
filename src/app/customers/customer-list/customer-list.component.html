@@ -1,0 +1,160 @@
+<div class="container">
+  <!-- SEARCH CONDITIONS FORM START -->
+  <form class="form-horizontal"> 
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="company">会社</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="company" name="" value="">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="department">部署</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="department" name="" value="">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">名前</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="name" name="" value="">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="cube_emp">CUBE担当者</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="cube_emp" name="" value="">
+      </div>
+    </div>
+    <div class="form-group"> 
+      <div class="col-sm-1">
+        <button type="submit" class="btn btn-primary">絞り込み</button>
+      </div>
+    </div>
+  </form>
+  <!-- SEARCH CONDITIONS FORM END -->
+</div>
+
+<hr style="height:1px; border:none; color:#333; background-color:#333;" />
+
+<!-- SEARCH RESULT START -->
+<div class="container-fluid">
+  <div class="col-sm-1">
+    <button type="submit" class="btn btn-primary" style="width: 100px">保存</button>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="table-responsive">
+
+      <table id="searchResult" class="table table-bordered table-hover table-condensed display compact" cellspacing="0" width="100%">
+        <thead style="text-align: center">
+          <tr>
+            <th rowspan="2" style="min-width: 60px;">No</th>
+            <th rowspan="2" style="min-width: 130px;"></th>
+            <th rowspan="2" style="min-width: 50px;">削除</th>
+            <th rowspan="2" style="min-width: 120px;">会社</th>
+            <th rowspan="2" style="min-width: 80px;">部署1</th>
+            <th rowspan="2" style="min-width: 80px;">部署2</th>
+            <th rowspan="2" style="min-width: 80px;">役職</th>
+            <th rowspan="2" style="min-width: 100px;">名前</th>
+            <th rowspan="2" style="min-width: 80px;">拠点</th>
+            <th rowspan="2" style="min-width: 80px;">更新日</th>
+            <th colspan="5" style="min-width: 100px;">45期</th>
+            <th colspan="5" style="min-width: 100px;">44期</th>
+          </tr>
+          <tr>
+            <th style="min-width: 50px;">大川</th>
+            <th style="min-width: 50px;">Mai</th>
+            <th style="min-width: 50px;">Duy</th>
+            <th style="min-width: 50px;">Khanh</th>
+            <th style="min-width: 50px;">井上</th>
+            <th style="min-width: 50px;">大川</th>
+            <th style="min-width: 50px;">Mai</th>
+            <th style="min-width: 50px;">Duy</th>
+            <th style="min-width: 50px;">Khanh</th>
+            <th style="min-width: 50px;">井上</th>
+          </tr>
+        </thead>
+
+        <tbody *ngIf="customers">
+          <tr *ngFor="let customer of customers" id="{{ customer.id }}">
+            <td>
+              <div style="position: absolute;">
+                <a class="btn btn-xs btn-success btn-addrow" style="background: none; border: none; padding: 0; margin-left: -6px; margin-bottom: -52px; position: relative;">
+                  <span class="glyphicon glyphicon-plus" style="color: #18bc9c"></span>
+                </a>
+              </div>
+              {{ customer.id }}
+            </td>
+            <td>
+              <a class="btn btn-info btn-table">顧客情報</a>
+              <a class="btn btn-info btn-table">営業情報</a>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>{{ customer.kaisha }}</td>
+            <td>{{ customer.busho_1 }}</td>
+            <td>{{ customer.busho_2 }}</td>
+            <td>{{ customer.yakushoku }}</td>
+            <td>{{ customer.namae }}</td>
+            <td>{{ customer.kyoten }}</td>
+            <td>{{ customer.koushinbi | date:"yyyy/MM/dd" }}</td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <input type="checkbox" style="position: inherit; margin: 0">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- SEARCH RESULT END -->
