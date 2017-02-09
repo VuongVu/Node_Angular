@@ -35,8 +35,6 @@ export class CustomerListComponent implements OnInit {
       'namae': value.namae
     };
 
-    // console.log(data.kaisha + ' ' + data.busho + ' ' + data.namae);
-
     this.customersService.searchCustomers(data).subscribe(
       customers => this.customers = customers,
       err => console.error(err)

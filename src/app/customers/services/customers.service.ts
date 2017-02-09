@@ -21,8 +21,6 @@ export class CustomersService {
     const params: URLSearchParams = new URLSearchParams();
     const options = new RequestOptions({ headers: new Headers({'Content-Type': 'application/json'}) });
 
-    // console.log(data.kaisha + ' ' + data.busho + ' ' + data.namae + ' ' + 'Retrieved from component');
-
     params.set('kaisha', data.kaisha);
     params.set('busho', data.busho);
     params.set('namae', data.namae);
