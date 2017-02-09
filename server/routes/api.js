@@ -80,13 +80,14 @@ router.get('/customer-list/test', (req, res, next) => {
 router.get('/customer-list', (req, res, next) => {
   const results = [];
 
-  // Grab data from http request
+  // Grab data from url parameters
   const data = {
-    kaisha: req.body.kaisha,
-    busho_1: req.body.busho,
-    busho_2: req.body.busho,
-    namae: req.body.namae
+    'kaisha': req.query.kaisha,
+    'busho_1': req.query.busho,
+    'busho_2': req.query.busho,
+    'namae': req.query.namae
   };
+  
   // Get a Postgres client from the connection pool
   pg.connect(config, (err, client, done) => {
     // Handle connection error
@@ -100,7 +101,7 @@ router.get('/customer-list', (req, res, next) => {
     }
 
     // SQL Query > Select Data
-    const query = client.query('SELEC * from customers WHERE namae=($1)', [data.kaisha]);
+    const query = client.query('SELEC * from customers WHERE kaisha=($1)', [data.kaisha]);
     // Stream results back one row at a time
     query.on('row', (row) => {
       results.push(row);

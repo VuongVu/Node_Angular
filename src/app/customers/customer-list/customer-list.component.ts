@@ -11,7 +11,7 @@ import { Customers } from '../models/customers';
 export class CustomerListComponent implements OnInit {
 
   // Instantiate customers to an empty array
-  customers: Customers[];
+  customers: Customers[] = [];
   // Create instance of FormGroup
   customerForm: FormGroup;
 
@@ -35,12 +35,12 @@ export class CustomerListComponent implements OnInit {
       'namae': value.namae
     };
 
-    console.log(data.kaisha + ' ' + data.busho + ' ' + data.namae);
+    // console.log(data.kaisha + ' ' + data.busho + ' ' + data.namae);
 
-    // this.customersService.searchCustomers().subscribe(
-    //   customers => this.customers = customers,
-    //   err => console.error(err)
-    // );
+    this.customersService.searchCustomers(data).subscribe(
+      customers => this.customers = customers,
+      err => console.error(err)
+    );
   }
 
 }
