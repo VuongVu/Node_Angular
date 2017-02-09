@@ -1,5 +1,5 @@
-.form-group > .control-label {
-	text-align: left !important;
+.form-group>.control-label {
+  text-align: left !important;
 }
 
 table {
@@ -7,36 +7,32 @@ table {
   margin-top: 10px;
 }
 
-.table-bordered {
-    border: 1px solid silver;
-}
-
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-    border: 1px solid silver;
+.table-bordered>thead>tr>th,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>tbody>tr>td,
+.table-bordered>tfoot>tr>td {
+  border: 1px solid silver;
 }
 
 th {
-	text-align: center;
-	vertical-align: inherit !important;
+  text-align: center;
+  vertical-align: inherit !important;
 }
 
 td {
-	text-align: center;
-	vertical-align: inherit !important;
+  text-align: center;
+  vertical-align: inherit !important;
 }
 
 table > thead > tr > th {
-	background-color: #2F71AA !important;
-	color: white;
+  background-color: #2F71AA !important;
+  color: white;
 }
 
 .btn-table {
-	white-space: normal;
-	width: 55px;
-	height: initial;
+  white-space: normal;
+  width: 55px;
+  height: initial;
 }

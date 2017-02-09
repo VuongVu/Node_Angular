@@ -53,8 +53,7 @@ router.get('/customer-list', (req, res, next) => {
   // Grab data from url parameters
   const data = {
     'kaisha': req.query.kaisha,
-    'busho_1': req.query.busho,
-    'busho_2': req.query.busho,
+    'busho': req.query.busho,
     'namae': req.query.namae
   };
 
@@ -72,7 +71,9 @@ router.get('/customer-list', (req, res, next) => {
 
     // SQL Query > Select Data
     const query = client.query({
-      text: 'SELECT * FROM customers WHERE kaisha LIKE \'%' + data.kaisha + '%\' AND (busho_1 LIKE \'%' + data.busho_1 + '%\' OR busho_2 LIKE \'%' + data.busho_2 + '%\') AND namae LIKE \'%' + data.namae + '%\' ORDER BY id ASC;'
+      text: 'SELECT * FROM customers ' + 
+            'WHERE kaisha LIKE \'%' + data.kaisha + '%\'' + 
+            'AND busho LIKE \'%' + data.busho + '%\' AND namae LIKE \'%' + data.namae + '%\' ORDER BY id ASC;'
     }, (err) => {
       if (err) console.log(err);
     });

@@ -45,18 +45,17 @@
     <button type="submit" class="btn btn-primary" style="width: 100px">保存</button>
   </div>
 
-  <div class="col-sm-12">
-    <div class="table-responsive">
+  <div class="col-sm-12" style="margin-top: 10px">
+    <div class="table-responsive" style="height: 200px; overflow: auto">
 
-      <table id="searchResult" class="table table-bordered table-hover table-condensed display compact" cellspacing="0" width="100%">
-        <thead style="text-align: center">
+      <table id="searchResult" class="table table-bordered table-hover table-condensed" cellspacing="0" width="100%">
+        <thead style="text-align: center;">
           <tr>
             <th rowspan="2" style="min-width: 60px;">No</th>
             <th rowspan="2" style="min-width: 130px;"></th>
             <th rowspan="2" style="min-width: 50px;">削除</th>
             <th rowspan="2" style="min-width: 120px;">会社</th>
-            <th rowspan="2" style="min-width: 80px;">部署1</th>
-            <th rowspan="2" style="min-width: 80px;">部署2</th>
+            <th rowspan="2" style="min-width: 80px;">部署</th>
             <th rowspan="2" style="min-width: 80px;">役職</th>
             <th rowspan="2" style="min-width: 100px;">名前</th>
             <th rowspan="2" style="min-width: 80px;">拠点</th>
@@ -98,8 +97,7 @@
               </div>
             </td>
             <td>{{ customer.kaisha }}</td>
-            <td>{{ customer.busho_1 }}</td>
-            <td>{{ customer.busho_2 }}</td>
+            <td>{{ customer.busho }}</td>
             <td>{{ customer.yakushoku }}</td>
             <td>{{ customer.namae }}</td>
             <td>{{ customer.kyoten }}</td>
