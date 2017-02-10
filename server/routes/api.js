@@ -77,10 +77,48 @@ router.get('/customer-list', (req, res, next) => {
     }, (err) => {
       if (err) console.log(err);
     });
+
     // Stream results back one row at a time
     query.on('row', (row) => {
       results.push(row);
     });
+
+    // After all data is returned, close connection and return results
+    query.on('end', () => {
+      done();
+      return res.json(results);
+    });
+  });
+});
+
+// Get all customer items
+router.get('/customer-items', (req, res, next) => {
+  const results = [];
+
+  // Get a Postgres client from the connection pool
+  pg.connect(config, (err, client, done) => {
+    // Handle error connection
+    if (err) {
+      done();
+      console.log(err);
+      return res.status(500).json({
+        success: false,
+        data: err
+      });
+    }
+
+    // SQL Query > Select Data
+    const query = client.query({
+      text: 'SELECT * FROM customers ORDER BY koushinbi DESC;'
+    }, (err) => {
+      if (err) console.log(err);
+    });
+
+    // Stream result back one row at a time 
+    query.on('row', (row) => {
+      results.push(row);
+    });
+
     // After all data is returned, close connection and return results
     query.on('end', () => {
       done();

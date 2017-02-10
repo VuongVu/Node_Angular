@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <h4>顧客情報</h4>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5">
+      <h6>株式会社キューブシステム</h6>
+      <div style="margin-left: 10px">
+        <h6>金融システム本部</h6>
+        <h6>金融ソリューションサービス第1部　第2グループ</h6>
+        <h6>マネージャ</h6>
+        <h6>大川　博章</h6>
+      </div>
+      <br>
+      <h6>東京都品川区大崎１－１－１</h6>
+      <h6>大崎ウィズタワー　6F</h6>
+    </div>
+    <div class="col-sm-6" style="text-align: -webkit-center">
+      <img *ngIf="imageSrc" id="nengajou_img" [src]="imageSrc" class="img-responsive" width="440px" height="380px">
+      <label class="btn btn-primary btn-file" style="margin-top: 15px">
+				Upload <input (change)="handleInputImage($event)" id="upload_img" type="file" accept="image/png, image/jpeg, image/gif" class="hidden">
+			</label>
+    </div>
+  </div>
+</div>
+<hr style="height:1px;border:none;color:#333;background-color:#333;" />
+<div class="container-fluid">
+  <h4>顧客情報</h4>
+</div>
+<div class="container">
+  <div class="col-sm-12" style="margin-top: 10px">
+    <div class="table-responsive" style="height: 200px; overflow: auto">
+      <table id="searchResult" class="table table-bordered table-hover table-condensed" cellspacing="0" width="100%">
+        <thead style="text-align: center;">
+          <tr>
+            <th style="min-width: 100px;">No</th>
+            <th style="min-width: 200px;">変更日</th>
+            <th style="min-width: 150px;">会社</th>
+            <th style="min-width: 150px;">部署</th>
+            <th style="min-width: 150px;">役職</th>
+            <th style="min-width: 150px;">名前</th>
+            <th style="min-width: 150px;">拠点</th>
+            <th style="min-width: 250px;">名刺</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let customer of customers; let i = index" id="{{ customer.id }}">
+            <td>{{ i+1 }}</td>
+            <td>{{ customer.koushinbi | date:"yyyy/MM/dd HH:mm:ss" }}</td>
+            <td>{{ customer.kaisha }}</td>
+            <td>{{ customer.busho }}</td>
+            <td>{{ customer.yakushoku }}</td>
+            <td>{{ customer.namae }}</td>
+            <td>{{ customer.kyoten }}</td>
+            <td>{{ customer.meishi }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

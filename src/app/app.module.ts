@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { CustomerListComponent } from './customers/customer-list/customer-list.component';
+import { CustomerItemsComponent } from './customers/customer-items/customer-items.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UsersComponent } from './users/users.component';
 
@@ -25,7 +26,8 @@ import { CustomersService } from './customers/services/customers.service';
     MenuComponent,
     CustomerListComponent,
     PageNotFoundComponent,
-    UsersComponent
+    UsersComponent,
+    CustomerItemsComponent
   ],
   imports: [
     BrowserModule,

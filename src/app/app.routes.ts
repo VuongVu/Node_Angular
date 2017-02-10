@@ -1,3 +1,4 @@
+import { CustomerItemsComponent } from './customers/customer-items/customer-items.component';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -20,6 +21,10 @@ const appRoutes: Routes = [
   {
     path: 'customer-list',
     component: CustomerListComponent
+  },
+  {
+    path: 'customer-items',
+    component: CustomerItemsComponent
   },
   {
     path: 'users',
