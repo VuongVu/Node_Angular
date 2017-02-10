@@ -78,14 +78,14 @@
         </thead>
 
         <tbody *ngIf="customers">
-          <tr *ngFor="let customer of customers" id="{{ customer.id }}">
+          <tr *ngFor="let customer of customers" id="{{ customer.id }}; let i = index">
             <td style="position: relative">
               <div style="position: absolute;">
                 <a class="btn btn-xs btn-success btn-addrow" style="background: none; border: none; padding: 0; margin-left: -6px; margin-bottom: -52px; position: relative;">
                   <span class="glyphicon glyphicon-plus" style="color: #18bc9c"></span>
                 </a>
               </div>
-              {{ customer.id }}
+              {{ i + 1 }}
             </td>
             <td>
               <a class="btn btn-info btn-table">顧客情報</a>

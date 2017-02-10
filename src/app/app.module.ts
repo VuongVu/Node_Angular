@@ -17,6 +17,7 @@ import { UsersComponent } from './users/users.component';
 import { Routing } from './app.routes';
 import { UsersService } from './users.service';
 import { CustomersService } from './customers/services/customers.service';
+import { RegisterSalesComponent } from './register-sales/register-sales.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CustomersService } from './customers/services/customers.service';
     CustomerListComponent,
     PageNotFoundComponent,
     UsersComponent,
-    CustomerItemsComponent
+    CustomerItemsComponent,
+    RegisterSalesComponent
   ],
   imports: [
     BrowserModule,

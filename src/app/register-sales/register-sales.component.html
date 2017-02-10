@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <h4>顧客情報</h4>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h6>株式会社キューブシステム</h6>
+      <div style="margin-left: 10px">
+        <h6>金融システム本部</h6>
+        <h6>金融ソリューションサービス第1部　第2グループ</h6>
+        <h6>マネージャ</h6>
+        <h6>大川　博章</h6>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-2">日付</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">営業目的</label>
+          <div class="col-sm-4">
+            <select class="form-control">
+              <option style="display: none" selected disabled value=""></option>
+              <option>Cube</option>
+              <option>VN</option>
+              <option>Japan</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">件名</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">内容</label>
+          <div class="col-sm-10">
+            <textarea rows="3" class="form-control" style="resize: none"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">ファイル</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [value]="imageUrl" >
+          </div>
+          <div class="col-sm-2">
+            <label class="btn btn-primary">
+              Browses <input type="file" accept="" (change)="handleInputImage($event)" class="hidden">
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">結果</label>
+          <div class="col-sm-4">
+            <select class="form-control">
+              <option style="display: none" selected disabled value=""></option>
+              <option>Cube</option>
+              <option>VN</option>
+              <option>Japan</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">次のアポイント</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control">
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">同席者 <br /><span>(顧客)</span></label>
+          <div class="col-sm-10">
+            <textarea rows="2" class="form-control" style="resize: none"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">同席者 <br /><span>(CUBE)</span></label>
+          <div class="col-sm-10">
+            <textarea rows="2" class="form-control" style="resize: none"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-2">
+            <button type="submit" class="btn btn-primary btn-block">保存</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

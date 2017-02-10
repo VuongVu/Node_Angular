@@ -1,3 +1,4 @@
+import { RegisterSalesComponent } from './register-sales/register-sales.component';
 import { CustomerItemsComponent } from './customers/customer-items/customer-items.component';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -25,6 +26,10 @@ const appRoutes: Routes = [
   {
     path: 'customer-items',
     component: CustomerItemsComponent
+  },
+  {
+    path: 'register-sales',
+    component: RegisterSalesComponent
   },
   {
     path: 'users',
