@@ -1,31 +1,35 @@
 <div class="container">
   <!-- SEARCH CONDITIONS FORM START -->
-  <form class="form-horizontal" [formGroup]="customerForm" (ngSubmit)="searchCustomers(customerForm.value)"> 
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="kaisha">会社</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="kaisha" formControlName="kaisha">
+  <form class="form-horizontal" [formGroup]="customerForm" (ngSubmit)="searchCustomers(customerForm.value)">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="kaisha">会社</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="kaisha" formControlName="kaisha">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="busho">部署</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="busho" formControlName="busho">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="namae">名前</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="namae" formControlName="namae">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="cube_tantousha">CUBE担当者</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="cube_tantousha">
+        </div>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="busho">部署</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="busho" formControlName="busho">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="namae">名前</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="namae" formControlName="namae">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="cube_tantousha">CUBE担当者</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="cube_tantousha">
-      </div>
-    </div>
-    <div class="form-group"> 
       <div class="col-sm-1">
         <button type="submit" class="btn btn-primary">絞り込み</button>
       </div>
@@ -37,17 +41,15 @@
   <!-- SEARCH CONDITIONS FORM END -->
 </div>
 
-<hr style="height:1px; border:none; color:#333; background-color:#333;" />
+<hr style="height:1px; border:none; color:#333; background-color:#333; margin-top: 8px" />
 
 <!-- SEARCH RESULT START -->
 <div class="container-fluid">
   <div class="col-sm-1">
     <button type="submit" class="btn btn-primary" style="width: 100px">保存</button>
   </div>
-
   <div class="col-sm-12" style="margin-top: 10px">
-    <div class="table-responsive" style="height: 200px; overflow: auto">
-
+    <div class="table-responsive" style="height: 300px; overflow: auto">
       <table id="searchResult" class="table table-bordered table-hover table-condensed" cellspacing="0" width="100%">
         <thead style="text-align: center;">
           <tr>
@@ -76,9 +78,8 @@
             <th style="min-width: 50px;">井上</th>
           </tr>
         </thead>
-
         <tbody *ngIf="customers">
-          <tr *ngFor="let customer of customers" id="{{ customer.id }}; let i = index">
+          <tr *ngFor="let customer of customers; let i = index" id="{{ customer.id }}">
             <td style="position: relative">
               <div style="position: absolute;">
                 <a class="btn btn-xs btn-success btn-addrow" style="background: none; border: none; padding: 0; margin-left: -6px; margin-bottom: -52px; position: relative;">

@@ -1,3 +1,15 @@
+@media screen and (max-width: 767px) {
+  .btn {
+    display: block;
+    width: 100% !important;
+    margin-top: 5px;
+  }
+}
+
+.form-group {
+  margin-bottom: 7px;
+}
+
 .form-group>.control-label {
   text-align: left !important;
 }
