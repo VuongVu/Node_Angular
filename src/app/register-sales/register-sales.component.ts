@@ -15,18 +15,18 @@ export class RegisterSalesComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleInputImage(e) {
-    const file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
+  handleInputImage(event) {
+    const file = event.dataTransfer ? event.dataTransfer.files[0] : event.target.files[0];
     const reader = new FileReader();
 
-    reader.onload = this._handleReaderLoader.bind(this);
-    reader.readAsDataURL(file);
-    this.imageUrl = e.target.files[0].mozFullPath;
-  }
+    if (file) {
+      reader.onload = (e: any) => {
+        this.imageSrc = e.target.result;
+        this.imageUrl = file.name;
+      };
 
-  _handleReaderLoader(e) {
-    const reader = e.target;
-    this.imageSrc = reader.result;
+      reader.readAsDataURL(file);
+    }
   }
 
 }
