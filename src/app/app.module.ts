@@ -17,7 +17,10 @@ import { UsersComponent } from './users/users.component';
 import { Routing } from './app.routes';
 import { UsersService } from './users.service';
 import { CustomersService } from './customers/services/customers.service';
-import { RegisterSalesComponent } from './register-sales/register-sales.component';
+import { RegisterSalesComponent } from './sales/register-sales/register-sales.component';
+import { ChangeKiComponent } from './change-ki/change-ki.component';
+import { UpdateKyotenComponent } from './update-kyoten/update-kyoten.component';
+import { SalesInfoComponent } from './sales/sales-info/sales-info.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { RegisterSalesComponent } from './register-sales/register-sales.componen
     PageNotFoundComponent,
     UsersComponent,
     CustomerItemsComponent,
-    RegisterSalesComponent
+    RegisterSalesComponent,
+    ChangeKiComponent,
+    UpdateKyotenComponent,
+    SalesInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,109 @@
+<div class="container">
+  <!-- SEARCH CONDITIONS FORM START -->
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Hidzuke">日付</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" id="Hidzuke_1">
+      </div>
+      <div class=" col-sm-1" style="text-align:center">~</div>
+      <div class=" col-sm-2">
+        <input type="text" class="form-control" id="Hidzuke_2">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="kaisha">会社</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="kaisha">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="busho">部署</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="busho">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="tantousha">担当者</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="tantousha">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="kenmei">件名</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="kenmei">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="eigyoumokuteki">営業目的</label>
+      <div class="col-sm-3 selectContainer">
+        <select class="form-control" name="eigyoumokuteki">
+            <option style="display: none" selected disabled value=""></option>
+            <option value="s">Sales Purpose(S)</option>          
+        </select>
+      </div>
+      <label class="control-label col-sm-1" for="kekka">結果</label>
+      <div class="col-sm-3 selectContainer">
+        <select class="form-control" name="kekka">
+            <option style="display: none" selected disabled value=""></option> 
+            <option value="r">result (R)</option>          
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-1">
+        <button type="submit" class="btn btn-primary">絞り込み</button>
+      </div>
+      <div class="col-sm-offset-1 col-sm-1">
+        <button type="button" class="btn btn-primary">ダウンロード</button>
+      </div>
+    </div>
+  </form>
+  <!-- SEARCH CONDITIONS FORM END -->
+</div>
+<hr style="height:1px; border:none; color:#333; background-color:#333;" />
+<!-- SEARCH RESULT START -->
+<div class="container-fluid">
+  <div class="col-sm-12">
+    <div class="table-responsive">
+      <table id="searchResult" class="table table-bordered table-hover table-condensed display compact" cellspacing="0" width="100%">
+        <thead style="text-align: center">
+          <tr>
+            <th rowspan="2" style="min-width: 80px;">日付</th>
+            <th rowspan="2" style="min-width: 60px;">会社</th>
+            <th rowspan="2" style="min-width: 50px;">部署</th>
+            <th rowspan="2" style="min-width: 80px;">役職</th>
+            <th rowspan="2" style="min-width: 80px;">顧客の名前</th>
+            <th rowspan="2" style="min-width: 80px;">営業目的</th>
+            <th rowspan="2" style="min-width: 100px;">担当者</th>
+            <th rowspan="2" style="min-width: 80px;">件名</th>
+            <th rowspan="2" style="min-width: 80px;">内容</th>
+            <th rowspan="2" style="min-width: 80px;">結果</th>
+            <th colspan="2" style="min-width: 100px;">次のアポイント</th>
+            <th rowspan="2" style="min-width: 100px;">同席者(顧客)</th>
+            <th rowspan="2" style="min-width: 100px;">同席者(CUBE)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
