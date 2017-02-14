@@ -43,8 +43,6 @@ export class CustomerListComponent implements OnInit {
 
   addTableRow() {
     const table = document.getElementById('searchResult');
-    const row = table.insertRow(0);
-
   }
 
 }

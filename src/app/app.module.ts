@@ -15,7 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { UsersComponent } from './users/users.component';
 
 import { Routing } from './app.routes';
-import { UsersService } from './users.service';
+import { UsersService } from './users/users.service';
 import { CustomersService } from './customers/services/customers.service';
 import { RegisterSalesComponent } from './sales/register-sales/register-sales.component';
 import { ChangeKiComponent } from './change-ki/change-ki.component';
