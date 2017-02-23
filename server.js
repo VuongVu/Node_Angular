@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const favicon = require('serve-favicon');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const opn = require('opn');
 
 // Get our API routes
@@ -17,17 +18,20 @@ const app = express();
 // Log request to the console.
 app.use(morgan('dev'));
 
+// Enable CORS
+app.use(cors());
+
 // Parsers for POST data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: false
+  extended: true
 }));
 
 // Parser Cookie
 app.use(cookieParser());
 
-// Point static path to public
-app.use(express.static(path.join(__dirname, 'public')));
+// Point static path to dist
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set our api routes
 app.use('/api', api);
