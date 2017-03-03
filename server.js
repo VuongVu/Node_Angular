@@ -3,23 +3,19 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const morgan = require('morgan');
-const favicon = require('serve-favicon');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const opn = require('opn');
 
 // Get our API routes
-const api = require('./server/routes/api');
+const users = require('./server/routes/users');
+const customers = require('./server/routes/customers');
 
 // Set up the express app
 const app = express();
 
 // Log request to the console.
 app.use(morgan('dev'));
-
-// Enable CORS
-app.use(cors());
 
 // Parsers for POST data
 app.use(bodyParser.json());
@@ -33,12 +29,16 @@ app.use(cookieParser());
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
+// Enable CORS
+app.use(cors());
+
 // Set our api routes
-app.use('/api', api);
+app.use('/api/users', users);
+app.use('/api/customers', customers);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 // Catch 404 and forward to error handler
@@ -59,7 +59,7 @@ if (app.get('env') === 'development') {
   });
 }
 
-// Production error handler no stacktraces leaked to user
+// Production error handler no stack traces leaked to user
 app.use( (err, req, res, next) => {
   res.status(err.status || 500);
   res.json({
@@ -80,6 +80,3 @@ server.listen(port, () => {
   console.log(`API running on localhost: ${port}`);
   console.log('Press Ctrl+C to quit.');
 });
-
-// Opens the url in the default browser 
-opn('http://localhost:3000');

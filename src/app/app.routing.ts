@@ -1,15 +1,15 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MenuComponent } from './menu/menu.component';
-import { CustomerListComponent } from './customers/customer-list/customer-list.component';
-import { UsersComponent } from './users/users.component';
-import { ChangeKiComponent } from './change-ki/change-ki.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { RegisterSalesComponent } from './sales/register-sales/register-sales.component';
-import { CustomerItemsComponent } from './customers/customer-items/customer-items.component';
-import { UpdateKyotenComponent } from './update-kyoten/update-kyoten.component';
-import { SalesInfoComponent } from './sales/sales-info/sales-info.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { CustomerListComponent } from './components/customers/customer-list/customer-list.component';
+import { UsersComponent } from './components/users/users.component';
+import { ChangeKiComponent } from './components/change-ki/change-ki.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { RegisterSalesComponent } from './components/sales/register-sales/register-sales.component';
+import { CustomerItemsComponent } from './components/customers/customer-items/customer-items.component';
+import { UpdateKyotenComponent } from './components/update-kyoten/update-kyoten.component';
+import { SalesInfoComponent } from './components/sales/sales-info/sales-info.component';
 
 // Route Configuration
 const appRoutes: Routes = [

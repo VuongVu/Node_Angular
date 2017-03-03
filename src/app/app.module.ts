@@ -6,21 +6,21 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 // Declarations
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { MenuComponent } from './menu/menu.component';
-import { CustomerListComponent } from './customers/customer-list/customer-list.component';
-import { CustomerItemsComponent } from './customers/customer-items/customer-items.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { UsersComponent } from './users/users.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { CustomerListComponent } from './components/customers/customer-list/customer-list.component';
+import { CustomerItemsComponent } from './components/customers/customer-items/customer-items.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { UsersComponent } from './components/users/users.component';
+import { RegisterSalesComponent } from './components/sales/register-sales/register-sales.component';
+import { ChangeKiComponent } from './components/change-ki/change-ki.component';
+import { UpdateKyotenComponent } from './components/update-kyoten/update-kyoten.component';
+import { SalesInfoComponent } from './components/sales/sales-info/sales-info.component';
 
-import { Routing } from './app.routes';
-import { UsersService } from './users/users.service';
-import { CustomersService } from './customers/services/customers.service';
-import { RegisterSalesComponent } from './sales/register-sales/register-sales.component';
-import { ChangeKiComponent } from './change-ki/change-ki.component';
-import { UpdateKyotenComponent } from './update-kyoten/update-kyoten.component';
-import { SalesInfoComponent } from './sales/sales-info/sales-info.component';
+import { Routing } from './app.routing';
+import { UsersService } from './users.service';
+import { CustomersService } from './components/customers/services/customers.service';
 
 @NgModule({
   declarations: [
